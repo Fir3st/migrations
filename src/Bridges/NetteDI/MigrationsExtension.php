@@ -144,7 +144,7 @@ class MigrationsExtension extends Nette\DI\CompilerExtension
 		}
 
 		$builder->getDefinition($this->prefix('configuration'))
-			->setArguments([$groups, $extensionHandlers]);
+			->setArguments([$groups, $extensionHandlers, $config['commandNamespace']]);
 	}
 
 
