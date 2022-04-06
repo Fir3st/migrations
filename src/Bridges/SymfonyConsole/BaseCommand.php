@@ -18,6 +18,8 @@ use Symfony\Component\Console\Command\Command;
 
 abstract class BaseCommand extends Command
 {
+    const DEFAULT_NAMESPACE = 'migrations';
+
 	/** @var IDriver */
 	protected $driver;
 
@@ -50,5 +52,14 @@ abstract class BaseCommand extends Command
 
 		return 0;
 	}
+
+    /**
+     * @param string $name
+     * @return BaseCommand
+     */
+    public function setName($name)
+    {
+        return parent::setName($this->config->getCommandNamespace() . ":$name");
+    }
 
 }

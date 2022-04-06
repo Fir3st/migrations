@@ -26,9 +26,6 @@ class CreateCommand extends BaseCommand
 	const CONTENT_SOURCE_EMPTY = 'empty';
 
 	/** @var string */
-	protected static $defaultName = 'migrations:create';
-
-	/** @var string */
 	protected static $defaultDescription = 'Creates new migration file with proper name (e.g. 2015-03-14-130836-label.sql)';
 
 	/** @var string */
@@ -50,7 +47,7 @@ class CreateCommand extends BaseCommand
 	 */
 	protected function configure()
 	{
-		$this->setName(self::$defaultName);
+        $this->setName('create');
 		$this->setDescription(self::$defaultDescription);
 		$this->setHelp('Prints path of the created file to standard output.');
 

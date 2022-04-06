@@ -28,4 +28,10 @@ interface IConfiguration
 	 */
 	public function getExtensionHandlers();
 
+
+    /**
+     * @return string
+     */
+    public function getCommandNamespace();
+
 }

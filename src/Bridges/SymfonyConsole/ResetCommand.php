@@ -17,14 +17,11 @@ use Symfony\Component\Console\Output\OutputInterface;
 class ResetCommand extends BaseCommand
 {
 	/** @var string */
-	protected static $defaultName = 'migrations:reset';
-
-	/** @var string */
 	protected static $defaultDescription = 'Drops current database and recreates it from scratch';
 
 	protected function configure()
 	{
-		$this->setName(self::$defaultName);
+        $this->setName('reset');
 		$this->setDescription(self::$defaultDescription);
 		$this->setHelp("Drops current database and runs all migrations");
 	}

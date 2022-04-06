@@ -34,6 +34,7 @@ class MigrationsExtension extends Nette\DI\CompilerExtension
 		'diffGenerator' => TRUE, // false|doctrine
 		'withDummyData' => FALSE,
 		'ignoredQueriesFile' => NULL,
+        'commandNamespace' => Nextras\Migrations\Bridges\SymfonyConsole\BaseCommand::DEFAULT_NAMESPACE,
 	];
 
 	/** @var array */
